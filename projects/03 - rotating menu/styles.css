@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+:root {
+    --color-primary: rgb(100, 253, 11);
+    --color-secondary: rgb(121, 122, 121);
+    --color-tertiary: rgb(255, 0, 106);
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: var(--color-secondary);
+    background-color: var(--color-secondary);
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    background-color: var(--color-primary);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.5s linear;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-50deg);
+    background-color: var(--color-tertiary);
+}
+
+.circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: white
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open {
+    left: 60%;
+    top: 45%;
+}
+
+.circle button#close {
+    top: 50%;
+    transform: rotate(10deg);
+    transform-origin: top left;
+}
+
+.circle button#close i {
+    transform: rotate(60deg);
+}
+
+nav#main-nav {
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    transform: translateX(-200px);
+    transition: transform 0.5s linear;
+}
+
+nav#main-nav ul {
+    list-style: none;
+    padding-right: 30px;
+}
+
+nav#main-nav ul li {
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+nav#main-nav ul li + li{
+    margin-left: 15px;
+}
+
+nav#main-nav ul li + li + li {
+    margin-left: 30px;
+}
+
+nav#main-nav ul li:hover {
+    cursor: pointer;
+    color: var(--color-primary);
+    text-shadow: 3px 3px 2px rgb(168, 168, 168), 1px 1px 0px var(--color-primary);
+}
+
+nav#main-nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease-in;
+    padding: 5px;
+}
+
+.container.show-nav + nav#main-nav {
+    transform: translate(0);
+}
+
+.nav-ahead {
+    z-index: 100;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}

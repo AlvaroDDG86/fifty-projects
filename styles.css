@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #552ea5;
+    --color-secondary: #0ececf;
+    --color-tertiary: rgb(102, 0, 128);
+    --color-bg: rgb(255, 255, 255);
+    --color-bg-dark: rgb(15, 23, 90);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background-color: rgb(5, 5, 141);
+    color: rgb(216, 216, 159);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.btn:focus, .btn:hover {
+    outline: 0;
+    cursor: pointer;
+}
+
+#switch {
+    top: 20px;
+    right: 20px;
+}
+
+#github {
+    top: 20px;
+    right: 60px;
+    background-color: var(--color-primary);
+}
+
+#github a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Krona One', sans-serif;
+    color: var(--color-secondary);
+    text-shadow: 2px 2px 0px var(--color-bg), 4px 4px 0px var(--color-primary);
+}
+
+.content {
+    width: 80%;
+    height: 88vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+    background-color: rgba(13, 219, 226, 0.507);
+    border-radius: 20px;
+}
+
+.project {
+    margin: 20px;
+    border-radius: 20px;
+    flex: 40%;
+    height: 200px;
+    background-color: var(--color-bg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 48, 48, 0.753);
+    color: white;
+    z-index: -1;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    transform: translateY(200px);
+}
+
+.go-demo {
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.project:hover {
+    cursor: pointer;
+}
+
+.project:hover .description{
+    z-index: 1;
+    transform: translateY(0);
+}
+
+body.dark {
+    background-color:  var(--color-primary);
+}
+
+.dark #switch {
+    background-color: rgb(86, 217, 235);
+    color: yellow;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5 {
+    font-family: 'Krona One', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 0px var(--color-primary), 4px 4px 0px var(--color-secondary);
+}
+
+.dark .project {
+    background-color: var(--color-bg-dark);
+}
+
+.dark #github {
+    background-color: var(--color-secondary);
+}
+
+.dark #github a {
+    color: var(--color-primary);    
+}
+
+
+@media only screen and (max-width: 800px) {
+    .project {
+        flex: 100%;
+    }
+
+    #switch {
+        top: 65px;
+        right: 7px;
+    }
+
+    #github {
+        top: 65px;
+        right: 40px;
+    }
+
+    .content {
+        padding-top: 10px;
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-secondary); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary); 
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: var(--color-primary); 
+}
+
+/* Handle on hover */
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary); 
+}
+
