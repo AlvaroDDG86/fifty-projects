@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: greenyellow;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 10px;
+    color: white;
+    text-shadow: 2px 2px 0px greenyellow, 3px 3px 0px green;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.box {
+    background-color: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(0) translateY(200%);
+    transition: transform 0.4s ease;
+}
+
+.box.show {
+    transform: scale(1) translateY(0);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(162, 218, 79); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: green; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(9, 73, 1); 
+}
