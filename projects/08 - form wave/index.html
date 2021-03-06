@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <title>Boilerplate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form">
+        <div class="title">
+            APP login
+        </div>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-item">
+                <i class="fas fa-user"></i>
+                <input type="text" name="user" id="user" required>
+                <label for="user">Email</label>
+            </div>
+            <div class="form-item">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="pass" id="pass" required>
+                <label for="pass">Contraseña</label>
+            </div>
+        </form>
+        <div class="btns">
+            <button class="btn">
+                Google
+            </button>
+            <button class="btn">
+                Entrar
+            </button>
+        </div>
+        <div class="info">
+            <p>¿No tienes cuenta de usuario? <a href="#">Crear una nueva</a></p>
+            <p>Al registrarte con nosotros, aceptas nuestros <a href="#">Términos de servicio y Política de
+                    Privacida</a></p>
+        </div>
+        <!-- <img class="logo" src="./images/logo.PNG" alt="logo"> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
