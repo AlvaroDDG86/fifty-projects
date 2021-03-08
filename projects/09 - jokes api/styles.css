@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Stick&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10px;
+    background-color: rgb(206, 255, 206);
+}
+
+.content {
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.082), 0px 10px 15px rgba(0, 0, 0, 0.123);
+    max-width: 100%;
+    min-width: 350px;
+    width: 600px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.content.loading::before {
+    content: "Loading...";
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(185, 184, 184, 0.781);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+}
+
+.content h3 {
+    color: rgba(0, 0, 0, 0.705);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px white, 4px 4px 3px chartreuse;
+}
+
+.content p.joke {
+    text-align: justify;
+    font-family: 'Stick', sans-serif;
+}
+
+.content .btn {
+    font-family: 'Stick', sans-serif;
+    background-color: chartreuse;
+    color: white;
+    font-size: 17px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.082), 0px 10px 15px rgba(0, 0, 0, 0.123);
+    cursor: pointer;
+}
+
+.content .btn:active {
+    transform: scale(0.9);
+}
