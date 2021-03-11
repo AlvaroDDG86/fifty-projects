@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(0, 255, 191);
+    --secondary-color: rgb(182, 180, 180);
+    --facebook-color: #1877f2;
+    --twitter-color: rgb(29, 161, 242);
+    --youtube-color: #F00;
+    --instagram-color: #fdf497;
+}
+
+body {
+    font-family: 'DotGothic16', sans-serif;
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+#refresh {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    cursor:pointer;
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+    transition: 0.4s linear;
+}
+
+#refresh:hover {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+#refresh > i {
+    font-size: initial;
+}
+
+.follow-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 200px;
+    border-radius: 15px;
+    background-color: white;
+    margin: 5px 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 3px 0;
+}
+
+.follow-item.facebook {
+    color: white;
+    background-color: var(--facebook-color);
+}
+.follow-item.instagram {
+    color: white;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.follow-item.twitter {
+    color: white;
+    background-color: var(--twitter-color);
+}
+.follow-item.youtube {
+    color: white;
+    background-color: var(--youtube-color);
+}
+
+i {
+    font-size: 2.5em;
+}
+
+.counter {
+    font-size: 2em;
+}
+
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+}
